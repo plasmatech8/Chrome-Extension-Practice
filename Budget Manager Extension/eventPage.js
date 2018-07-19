@@ -38,4 +38,22 @@ chrome.contextMenus.onClicked.addListener(function(clickData){
 			});
 		}	
 	}
-})
+});
+
+// Add badge to icon
+chrome.storage.onChanged.addListener(function(changes, storageName){
+	
+	// Badge Text
+	chrome.browserAction.setBadgeText({"text": changes.total.newValue.toString()});
+	
+	// Badge Colour
+	chrome.storage.sync.get(['total', 'limit'], function(budget){
+		
+		if (parseInt(budget.total) >= parseInt(budget.limit)) {
+			chrome.browserAction.setBadgeBackgroundColor({color:'red'});
+		}else{
+			chrome.browserAction.setBadgeBackgroundColor({color:'ForestGreen'});
+		}
+	});
+});
+
