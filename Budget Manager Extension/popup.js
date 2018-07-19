@@ -39,16 +39,17 @@ function init() {
 				// function to create notification
 				if (amount && newTotal >= budget.limit) {
 					
+					// Notification
 					var notifOptions = {
 						type: 'basic', 
 						iconUrl:'icon48.png',
 						title: 'Limit Reached!',
 						message: 'Uh oh! You have reached your budget limit.'
 					}	
+					chrome.notifications.create('limitNotif', notifOptions);
 					
-					alert('Uh oh! You have reached your budget limit.');
-					chrome.notications.create('limitNotif', notifOptions);
-					
+					// Alert
+					//alert('Uh oh! You have reached your budget limit.');
 				}
 			});
 			

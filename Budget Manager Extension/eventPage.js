@@ -32,9 +32,20 @@ chrome.contextMenus.onClicked.addListener(function(clickData){
 				// Set total spent and alert user
 				chrome.storage.sync.set({'total': newTotal}, function(){
 					if (newTotal >= budget.limit) {
-						alert('Uh oh! You have reached your budget limit.');
+						
+						// Notification
+						var notifOptions = {
+							type: 'basic', 
+							iconUrl:'icon48.png',
+							title: 'Limit Reached!',
+							message: 'Uh oh! You have reached your budget limit.'
+						}	
+						chrome.notifications.create('limitNotif', notifOptions);
+						
+						// Alert
+						//alert('Uh oh! You have reached your budget limit.');
 					}
-				})
+				});
 			});
 		}	
 	}
