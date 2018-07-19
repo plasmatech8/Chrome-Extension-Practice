@@ -25,7 +25,7 @@ Notifications do not seen to work for some reason. An alert was used instead, th
 	"persistent":false
 }
 ```
-	- Note: that persistent=false is an event page and persistent=true is a packground page.
+- Note: that persistent=false is an event page and persistent=true is a packground page.
 
 - It is probably a good idea to modularise our javascript via includes.
 
