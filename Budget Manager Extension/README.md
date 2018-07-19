@@ -14,17 +14,17 @@ Notifications do not seen to work for some reason. An alert was used instead, th
 - The options menu is a page you can open by right-clicking the icon.
 
 - Create an 'options' html page which opens on right-click > options:
-'''javascript
+```javascript
 "options_page":"options.html",
-'''
+```
 
 - Create an 'event' script:
-'''javascript
+```javascript
 "background":{
 	"scripts":["eventPage.js"],
 	"persistent":false
 }
-'''
+```
 	- Note: that persistent=false is an event page and persistent=true is a packground page.
 
 - It is probably a good idea to modularise our javascript via includes.
