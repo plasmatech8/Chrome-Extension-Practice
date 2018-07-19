@@ -28,3 +28,6 @@ Notifications do not seen to work for some reason. An alert was used instead, th
 	- Note: that persistent=false is an event page and persistent=true is a packground page.
 
 - It is probably a good idea to modularise our javascript via includes.
+
+- Badges are small notes (containing numbers) over the extension icon.
+	- They can be used for showing a number of actions or something.
