@@ -51,8 +51,6 @@ chrome.storage.onChanged.addListener(function(changes, storageName){
 		
 		if (parseInt(budget.total) >= parseInt(budget.limit)) {
 			chrome.browserAction.setBadgeBackgroundColor({color:'red'});
-		}else{
-			chrome.browserAction.setBadgeBackgroundColor({color:'ForestGreen'});
 		}
 	});
 });
