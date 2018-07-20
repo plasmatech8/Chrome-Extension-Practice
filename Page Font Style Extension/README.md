@@ -28,7 +28,8 @@ The content script will send a message to the eventPage to highlight the icon.
 
 ## Notes:
 
-1) We specify the URLs in which the content script will run:
+1)  
+We specify the URLs in which the content script will run:
 ```javascript
 "content_scripts":[
 		{
@@ -39,14 +40,16 @@ The content script will send a message to the eventPage to highlight the icon.
 ```
 The content script will send a message to eventPage.js.
 
-2) eventPage.js is a event script used to activate the extension, when a message is sent from the activation of content.js.
+2)  
+eventPage.js is a event script used to activate the extension, when a message is sent from the activation of content.js.
 ```javascript
 "background":{
 		"scripts":["eventPage.js"],
 		"persistent": false
 	},
 ```
-3) When request to activate the extension occurs on eventPage.js:
+3)  
+When request to activate the extension occurs on eventPage.js:
 ```javascript
 chrome.tabs.query({ active:true, currentWindow:true }, function(tabs){
 		chrome.pageAction.show(tabs[0].id);
@@ -54,7 +57,8 @@ chrome.tabs.query({ active:true, currentWindow:true }, function(tabs){
 ```
 This activates the icon and allows the popup to appear (running via page action).
 
-4) Now the page action extension is activated:
+4)  
+Now the page action extension is activated:
 ```javascript
 "page_action":{
 		"default_icon":"icon16.png",
@@ -64,4 +68,5 @@ This activates the icon and allows the popup to appear (running via page action)
 ```
 Note: that page_action =/= browser_action
 
-5) Messages can now be sent from popup.js to content.js.
+5)  
+Messages can now be sent from popup.js to content.js.
