@@ -1,5 +1,7 @@
 # Budget Manager:
 
+A browser-action event-based extension.
+
 - Must be browser action
 - Accept spending
 - Display total spending
