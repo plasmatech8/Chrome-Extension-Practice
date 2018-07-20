@@ -5,8 +5,8 @@ A page-action extension.
 - Other pages = inactive/greyed out
 
 ## Outline:
-1)  content.js is activates only on certain pages (as per the manifest)
-2)  content.js sends message to eventPage.js to activate the extension (popup.html AND icon).
+1) content.js is activates only on certain pages (as per the manifest)
+2) content.js sends message to eventPage.js to activate the extension (popup.html AND icon).
 3) eventPage.js activates the extension via page action.
 4) We can now open popup.html via page action.
 5) We can enter input fields to send messages to content.js to change the webpage.
