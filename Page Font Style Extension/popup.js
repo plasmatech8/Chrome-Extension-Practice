@@ -13,7 +13,7 @@ function init() {
 	
 	// Color Input Field
 	var colorInputFunc = function(){
-		fontColor = document.getElementById('fontColor').value;
+		fontColor = fontColorField.value;
 	}
 	fontColorField.addEventListener("change", colorInputFunc);
 	fontColorField.addEventListener("paste", colorInputFunc);
