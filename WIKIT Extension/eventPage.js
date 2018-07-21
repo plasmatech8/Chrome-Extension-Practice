@@ -7,17 +7,6 @@ var menuItem = {
 // Create Context Menu item
 chrome.contextMenus.create(menuItem);
 
-// // Passed values into event
-// var contextMenuItem = {
-// 	"id":"spendMoney",
-// 	"title":"Spend Money",
-// 	"contexts":["selection"] // Which object-right-click  this is supposed to appear on
-// }
-
-// // Create menu item
-// chrome.contextMenus.create(contextMenuItem)
-
-
 // We want to append our word to the URI of wikipedia, so clean the input.
 function fixedEncodeURI(str){
 	return encodeURI(str).replace(/%5B/g, '[').replace(/%5D/g, ']')
